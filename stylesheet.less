@@ -425,6 +425,8 @@ input[type=email],
 	height: 42px;	
 	width: 65%;
 	border:0;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .contactform input[type=email] {
@@ -935,6 +937,9 @@ header.bk-header .header-left .widget.profile span {
 .bk-profile-address p {
 	line-height:@font-swatch4-line-height;
 	margin-right:5px;
+    &:after {
+        display: none;
+    }
 }
 
 /*	===============================
@@ -1635,6 +1640,8 @@ input, textarea {
 
 input[type=search], input[type=text], input[type=email], .signupform fieldset input {
 	height:40%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .widget.ecombasket .ecombasket-pull {
@@ -1660,6 +1667,11 @@ input[type=search], input[type=text], input[type=email], .signupform fieldset in
 }
 
 // Ecom filter select
+
+.productlist-filter .form-group {
+    display: inline-block;
+    vertical-align: top;
+}
 
 .form-group.ecom-productslist-search {
     input {
