@@ -457,7 +457,8 @@ button.btn,
 .widget.dropbox button,
 .widget.socialicons span a, 
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
-.ecombasket-remove-button {
+.ecombasket-remove-button,
+.ecombasket-summary-link {
 	background-color: @color-swatch3;
 	border: none;
 	-webkit-transition: background-color .2s;
@@ -465,10 +466,11 @@ button.btn,
 	-ms-transition: background-color .2s;
 	transition: background-color .2s;
 	margin-bottom: 10px;
-	border-radius:3px;
+	border-radius: 3px;
 	&:hover {
 		background-color: lighten(@color-swatch3,5%);
 		border: none;
+        text-decoration: none;
 	}
 }
 
@@ -497,16 +499,16 @@ button.btn,
 }
 
 .widget.socialicons, .widget.profile .bk-profile-socialicons {
-  min-height:32px;
+  min-height: 32px;
 }
 
 .widget.profile .bk-profile-socialicons {
-	margin:0;
+	margin: 0;
 }
 
 footer.bk-footer .widget.profile .bk-profile-socialicons span a {
 	background-color: @color-swatch3;
-	border-radius:3px;
+	border-radius: 3px;
 }
 
 footer.bk-footer .widget.profile .bk-profile-socialicons span a:hover {
@@ -514,8 +516,8 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a:hover {
 }
 
 footer.bk-footer .twitter-content {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 }
 
 .widget.socialicons {
@@ -524,7 +526,7 @@ footer.bk-footer .twitter-content {
 
 hr.line {
 	background-color: fade(@color-swatch5, 25%);
-	height:1px;
+	height: 1px;
 }
 
 button.btn,
@@ -534,18 +536,17 @@ button.btn,
 }
 
 .widget.clicktocall a {
-	padding: 13px 14px 8px;
+	padding: 7px 14px 8px;
 }
 
 .blog-search-submit-button {
 	padding: 9px 14px 9px 14px;
-	margin-left:10px;
     vertical-align: middle;
 }
 
 .signupform fieldset button {
-	padding: 9px 16px 6px 16px;
-	margin-left:5px;
+	padding: 7px 16px;
+	margin-left: 5px;
 }
 
 .widget.profile form button {
@@ -557,41 +558,113 @@ button.btn,
 	border: 2px solid @color-swatch3;
 	display: inline-block;
 	margin-bottom: 1em;
-	border-radius:3px;
+	border-radius: 3px;
 	&:hover {
 		border-color: lighten(@color-swatch3, 5%);
 	}
 }
 
-/*
-	TWITTER
-*/
+/* ===============================
+   TWITTER WIDGET
+   =============================== */
 
-.widget.twitter ul li a,
-.widget.twitter ul li span a {
-    font-size: @font-swatch5-font-size;
-	text-decoration: none;
-	&:hover {
-		text-decoration: none;
-	}
-}
+@twitterProfilePicSize: 98px;
 
-.widget.twitter ul li {
-	padding-bottom:0;
-}
+.widget.twitter {
+  background-color: lighten(@color-swatch5,47%);
+  @media @tablet {
+    padding: 15px;
+  }
+  ul.twitter {
+    li {
+      position: relative;
+      min-height: @twitterProfilePicSize;
+      margin-bottom: 30px;
+      padding-bottom: 0;
+      @media @tablet {
+        margin-bottom: 15px;
+        min-height: 132px;
+      }
+      @media @mobile {
+         min-height: 75px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      // footer
+      a, time + span, time {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        font-family: @font-swatch5-font-family;
+        line-height: 1;
+        font-weight: normal;
+        color: fade(@color-swatch5,50%);
+        text-decoration: none;
+        @media @mobile {
+          font-size: bkscale(@font-swatch5-font-size, 0.6);
+        }
+      }
+      // profile pic
+      .twitter-profile-pic {
+        width: @twitterProfilePicSize;
+        height: @twitterProfilePicSize;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        @media @tablet {
+          margin: 16px 16px 0;
+        }
+        @media @mobile {
+          width: (@twitterProfilePicSize * 0.45);
+          height: (@twitterProfilePicSize * 0.45);
 
-.twitter-profile-pic {
-	a {
-		border: 0;
-	}
-}
-.twitter ul li time {
-	font-size: inherit;
-}
+        }
 
-.twitter-content {
-	padding-bottom: 10px;
-	margin-bottom: 10px;
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+      .twitter-content {
+        line-height: 1.2em;
+        margin-left: (@twitterProfilePicSize + 20);
+        @media @tablet {
+          padding: 15px;
+        }
+        @media @mobile {
+          margin-left: (@twitterProfilePicSize * 0.55 + 12);
+          padding: 10px;
+        }
+        .bk-full-name {
+            display: inline-block;
+            font-family: @font-swatch4-font-family;
+            font-size: @font-swatch5-font-size;
+            color: @font-swatch4-color;
+            border-bottom: 2px solid lighten(@color-swatch5,5%);
+            padding-bottom: 4px;
+          @media @mobile {
+            font-size: bkscale(@font-swatch5-font-size, 0.8);
+          }
+        }
+        p {
+          padding-top: 20px;
+          font-family: @font-swatch5-font-family;
+          @media @tablet {
+            padding-top: 0;
+            font-size: bkscale(@font-swatch5-font-size,0.8);
+            line-height: bkscale(@font-swatch5-line-height,0.8);
+          }
+          a {
+            font-family: @font-swatch5-font-family;
+            font-size: @font-swatch5-font-size;
+            color: @color-swatch3;
+            line-height: @font-swatch5-line-height;
+          }
+        }
+      }
+    }
+  }
 }
 
 /*
@@ -809,7 +882,11 @@ header.bk-header {
         margin-left: 0;
         width: 100%;
     }
+    @media @mobile {
+        width: 90%;
+    }
 }
+
 .header-section, .footer-section {
 	background: fade(@color-swatch5, 10%);
 	margin: 0 auto;
@@ -1194,7 +1271,7 @@ h1, h2, h3, h4, h5, h6 {
 		border: none;
 		padding: 0;
 		padding-top: 8px;
-		margin-right: -3px;
+		margin: 0 10px 10px 0;
 		text-indent:10px;
 	}
 	button, button:hover {
