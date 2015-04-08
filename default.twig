@@ -26,10 +26,12 @@
 	                <div class="column columns-two-left">
         				{{widget('content', 'logobannerright1', {content: '<p>Lorem ipsum dolor sit amet</p>'})|raw}}
 	                </div>
-	                <div class="column columns-two-right">
-	                    {{widget('profile', 'footercolumn1profilesocialicons1', { 	'profileType':'socialicons',   'socialicons':'profile'})|raw}}
-	                    {{widget('profile', 'footercolumn1profilecopyright1', { 	'profileType':'copyright',   'copyright':'profile'})|raw}}
-	                </div>
+                		<div class="column columns-two-right">
+                		    <div class="widget-profile-top">
+                		        {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',       		'socialicons':'profile'})|raw}}
+                		    </div>
+                		    {{widget('profile', 'footercolumn1profilecopyright', { 'profileType':'copyright',   		'copyright':'profile'})|raw}}
+                		</div>
 	            </div>
 	        </div>
 	    </footer>
