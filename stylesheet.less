@@ -1705,7 +1705,7 @@ input, textarea {
 }
 
 input[type=search], input[type=text], input[type=email], .signupform fieldset input {
-	 height:40%;
+	  height: 100%;
     display: inline-block;
     vertical-align: top;
     -webkit-appearance: none;
@@ -1828,7 +1828,6 @@ input[type=search], input[type=text] .signupform fieldset input {
             th {
                 border-bottom: 1px solid @color-swatch2;
                 &:nth-child(2) {
-                    border-right: 1px solid mix(@color-swatch2, #fff, 10%);
                 }
 
             }
@@ -1882,7 +1881,6 @@ input[type=search], input[type=text] .signupform fieldset input {
                 padding-right: 170px;
                 vertical-align: top;
                 position: relative;
-                border-right: 1px solid mix(@color-swatch2, #fff, 10%);
                 @media @bp-checkout-compact {
                     padding-right: 0;
                 }
@@ -1933,6 +1931,7 @@ input[type=search], input[type=text] .signupform fieldset input {
                     position: relative;
                     width: 150px;
                     height: 40px;
+                    margin-right: 10px;
                     @media @bp-checkout-compact {
                         position: relative;
                         right: 0;
@@ -1967,7 +1966,7 @@ input[type=search], input[type=text] .signupform fieldset input {
                             left: 0;
                         }
                         &.js-add {
-                            right: 0;
+                            right: 20px;
                         }
                     }
                     // Count
@@ -1981,7 +1980,7 @@ input[type=search], input[type=text] .signupform fieldset input {
                         text-align: center;
                         top: 0;
                         display: block;
-                        width: 70px;
+                        width: 50px;
                         @media @mobile {
                             height: 30px;
                             line-height: 30px;
@@ -1998,6 +1997,7 @@ input[type=search], input[type=text] .signupform fieldset input {
                     position: absolute;
                     right: 0;
                     bottom: 20px;
+                    margin-left: 10px;
                 }
             }
         }
@@ -2024,24 +2024,24 @@ input[type=search], input[type=text] .signupform fieldset input {
 
 .basket-summary-submit, .basket-summary-empty-cta {
   display: inline-block;
-  padding: 0 12px;
+  padding: 8px 12px;
   line-height: 45px;
-  height: 45px;
   font-weight: @font-swatch7-font-weight;
+  border-radius: 3px;
 }
 
 .basket-summary-empty-cta.btn {
-  background-color:@color-swatch3;
+  background-color: @color-swatch3;
   text-decoration: none;
   &:hover {
-    background-color:@color-swatch7;
+    background-color: lighten(@color-swatch3,10%);
   }
 }
 
 .basket-summary-legal-links {
-    padding-top:10px;
+    padding-top: 10px;
     list-style: none;
-    padding-left:0;
+    padding-left: 0;
     &:hover {
         text-decoration:underline!important;
     }
@@ -2350,6 +2350,9 @@ input[type=search], input[type=text] .signupform fieldset input {
   	.widget .extendednavigation ul li.folder ul {
   		margin-top:0;
   	}
+    .footer-content-widget {
+      text-align: center;
+    }
     .bk-header {
         .widget.extendednavigation .bk-overlay {
             width: 30px;
