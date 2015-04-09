@@ -1879,9 +1879,6 @@ input[type=search], input[type=text], input[type=email], .signupform fieldset in
                 padding-right: 170px;
                 vertical-align: top;
                 position: relative;
-                @media @bp-checkout-compact {
-                    padding-right: 0;
-                }
                 @media @mobile {
                     width: auto;
                     padding-left: 0;
@@ -1916,7 +1913,7 @@ input[type=search], input[type=text], input[type=email], .signupform fieldset in
                     line-height: 30px;
                     text-align: center;
                     font-size: bkscale(@font-swatch5-font-size, 0.8);
-                    @media @bp-checkout-compact {
+                    @media @tablet {
                         position: relative;
                         right: 0;
                         top: 0;
@@ -1937,7 +1934,7 @@ input[type=search], input[type=text], input[type=email], .signupform fieldset in
                     width: 150px;
                     height: 40px;
                     margin-right: 10px;
-                    @media @bp-checkout-compact {
+                    @media @tablet {
                         position: relative;
                         right: 0;
                         top: 0;
