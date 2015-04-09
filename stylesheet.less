@@ -380,7 +380,7 @@ textarea,
 .widget.profile form fieldset input,
 .signupform fieldset input {
 	border: 0;
-	padding: 5px 10px;
+	padding: 0px 10px 0;
 	text-indent: 0;
 	-webkit-transition: box-shadow .2s;
 	-moz-transition: box-shadow .2s;
@@ -402,10 +402,10 @@ input[type=search],
 input[type=text],
 input[type=email],
 .signupform fieldset input {
-	padding: 8px 10px 5px;	
+	padding: 0px 10px 0px;	
 	width: 65%;
 	background-color: darken(@color-swatch7,5%);
-  min-height: 36px;
+  min-height: 38px;
 }
 
 .blogsearch input.blog-search-input {
@@ -1736,7 +1736,8 @@ input[type=search], input[type=text], input[type=email], .signupform fieldset in
 
 .productlist-search input {
   margin-bottom: 10px;
-  min-height: 34px;
+  min-height: 33px;
+  padding: 0px 10px 0px;
 }
 
 // Ecom filter select
@@ -1750,10 +1751,6 @@ input[type=search], input[type=text], input[type=email], .signupform fieldset in
     input {
         padding: 4px 10px 5px;
     }
-}
-
-input[type=search], input[type=text] .signupform fieldset input {
-    padding: 4px 10px 5px;
 }
 
 // Hides *custom* dropdown arrow in Firefox 30 and above
