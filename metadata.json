@@ -1,7 +1,7 @@
 {
 	"name":"Surf and Love",
 	"thumbnail":"surfandlove.png",
-	"screenshot":"surfandlove.png",
+	"screenshot":"surf-love-screenshot.jpg",
 	"templateType":"standard",
     "pageTypes": [
         "home"
