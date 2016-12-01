@@ -418,18 +418,27 @@ input[type=email],
     vertical-align: top;
 }
 
-.contactform input[type=email] {
+.contactform input[type=email],
+.advancedcontactform form input[type=email], 
+.advancedcontactform form input[type=text] {
     width: 100%;
     margin-bottom: 20px;
 }
 
-.contactform label {
+.contactform label,
+.advancedcontactform .form-group>label,
+.advancedcontactform .option-list .option-item .label {
     margin-bottom: 10px;
 }
 
 input[type="search"]::-webkit-search-decoration {
     display: none;
 }
+
+.advancedcontactform .option-list {
+    padding: 1em 0;
+}
+
 
 /*
     BUTTONS
@@ -441,6 +450,7 @@ button.btn,
 .blog-search-submit-button,
 .widget.feature .feature-bgimg .content button.btn,
 .contactform button.btn,
+.advancedcontactform fieldset button,
 .widget.paypalbuynow .widget.button.paypal,
 .widget.tweet a,
 .widget.dropbox button,
@@ -461,6 +471,10 @@ button.btn,
         border: none;
         text-decoration: none;
     }
+}
+
+.advancedcontactform fieldset button {
+    margin-top: 20px;
 }
 
 .widget.tweet a {
@@ -521,7 +535,8 @@ hr.line {
 
 button.btn,
 .widget.feature .feature-bgimg .content button.btn,
-.contactform button.btn {
+.contactform button.btn,
+.advancedcontactform fieldset button {
     padding: 11px 14px;
 }
 
@@ -1626,7 +1641,7 @@ select {
     background-color:darken(@color-swatch7,5%);
     background-position-x: 95%;
     background-position-y: 53%;
-    height: 33px;
+    height: 44px;
 }
 
 select::-ms-expand {
@@ -1659,6 +1674,7 @@ select::-ms-expand {
     padding: 4px 14px 4px 14px;
     margin-top: 0;
     vertical-align: top;
+    min-height: 44px;
 }
 
 .ecom-productlist-info {
@@ -1742,7 +1758,7 @@ input[type=search], input[type=text], input[type=email], .signupform fieldset in
 
 .productlist-search input {
   margin-bottom: 10px;
-  min-height: 33px;
+  min-height: 44px;
   padding: 0px 10px 0px;
 }
 
