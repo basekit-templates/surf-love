@@ -1,5 +1,6 @@
 {
 	"name":"Surf and Love",
+	"versionTenCompatible": 1,
 	"thumbnail":"surfandlove.png",
 	"screenshot":"surf-love-screenshot.jpg",
 	"templateType":"standard",
