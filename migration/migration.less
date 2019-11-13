@@ -6,15 +6,20 @@
 #migrated-site {
 
 
-  // Stylseheet overrides
+
+
+
+  // Stylesheet overrides
   // -----------------------------
 
 
   // Template wrapper (replace with corresponding template classes)
-  .main.wrapper {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
+  .page-wrap {
+    padding: 0;
+  }
+
+  .bk-pt-default .canvas {
+    padding-top: 0;
   }
 
   // Main content spacing (replace with corresponding template class)
@@ -36,14 +41,17 @@
 
   // Replace with corresponding template values
   @container-width: 1200px;
-
   @spacing__first--desktop: 40px;
   @spacing__first--tablet:  30px;
   @spacing__first--mobile:  20px;
+  @spacing--other: 1em;
 
-  @spacing--other: 30px;
 
   // Applies spacing to widgets to mimic container width
+  .bk-header .wrapper,
+  .feature-section,
+  .bk-section,
+  .bk-footer .wrapper,
   .empty-zone,
   #page-zones__main:empty,
   #page-zones__main > .widget:not(.row),
@@ -51,6 +59,7 @@
     margin-left: auto;
     margin-right: auto;
     max-width: @container-width;
+    width: 90%;
   }
 
 
@@ -95,17 +104,10 @@
 
   // Adds spacing to the section when a widget is before it
   #page-zones__main > .widget:not(.row) + .row {
-    margin-bottom: @spacing--other;
     margin-top: @spacing--other;
 
-    &:not(:last-child) {
-         margin-bottom: 0;
-    }
-  }
-
-  @media only screen and (min-width: 930px) {
-    .page-wrap {
-      padding: 0 100px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
